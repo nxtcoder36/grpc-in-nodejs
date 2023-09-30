@@ -1,0 +1,19 @@
+{
+  "name": "grpc-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "node --harmony ./server.js --watch",
+    "client": "node ./client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grpc": "^1.24.11",
+    "grpc-tools": "^1.12.4",
+    "proto-loader": "^0.2.0"
+  }
+}

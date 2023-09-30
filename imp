@@ -1,0 +1,29 @@
+// on both server and client side
+pnpm init
+
+"type": "module",
+  "scripts": {
+    "dev": "node --harmony ./server.js --watch"
+  },
+
+pnpm add grpc @grpc/proto-loader
+pnpm install --save @grpc/proto-loader@latest
+
+npm run protoc
+
+"scripts": {
+    "protoc": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:../generated --grpc_out=./generated --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` -I ../proto ../*.proto"
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+pnpm install grpc protobufjs
+pnpm install grpc
+pnpm install grpc-tools
+pnpm add grpc @grpc/proto-loader
+
+npx grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` your_proto_file.proto
+------------------------------------------------------------------------------------------------------------------------------------------------
+pnpm i grpc
+pnpm i grpc-tools
+pnpm i proto-loader
